@@ -131,12 +131,12 @@ export default function Index() {
               key={book.id}
               className="bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 py-1 rounded-2xl overflow-hidden"
             >
-              <CardHeader className="p-0">
+              <CardHeader className="p-0 flex justify-center items-center">
                 {book.cover ? (
                   <img
                     src={book.cover}
                     alt={`${book.name} cover`}
-                    className="w-full h-64 object-cover"
+                    className="w-60 h-64 object-cover"
                   />
                 ) : (
                   <BookCover
