@@ -210,7 +210,7 @@ export default function Index() {
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=36.25563583877866,44.8832864024485&hl=ku&z=16&output=embed"
+            src="https://www.google.com/maps?q=36.25563583877866,44.8832864024485&hl=en&z=16&output=embed"
           ></iframe>
         </div>
         <div className="text-center text-gray-700 space-y-2">
