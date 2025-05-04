@@ -15,29 +15,50 @@ const BookCover: React.FC<BookCoverProps> = ({
 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
-    viewBox="0 0 512.004 512.004"
-    xmlSpace="preserve"
+    viewBox="0 0 512 512"
     className={className}
     width={width}
     height={height}
+    preserveAspectRatio="xMidYMid meet"
   >
+    {/* Background with a soft gradient */}
+    <defs>
+      <linearGradient id="coverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#4B5563" /> {/* Gray-700 */}
+        <stop offset="100%" stopColor="#6B7280" /> {/* Gray-500 */}
+      </linearGradient>
+    </defs>
+
     <rect
-      x="49.003"
-      className="fill-gray-300"
-      width="413.998"
-      height="512.004"
+      x="0"
+      y="0"
+      width="512"
+      height="512"
+      rx="16"
+      ry="16"
+      fill="url(#coverGradient)"
     />
-    <rect x="49.003" width="120.914" height="512.004" />
+
+    {/* Vertical strip like a spine */}
+    <rect
+      x="0"
+      y="0"
+      width="80"
+      height="512"
+      fill="#111827" // Gray-900
+    />
+
+    {/* Book title */}
     <text
       x="50%"
       y="50%"
+      dominantBaseline="middle"
       textAnchor="middle"
-      alignmentBaseline="middle"
-      fontSize="30"
+      fontSize="32"
       fontWeight="bold"
-      fill="white"
-      textLength="300"
+      fill="#F9FAFB"
+      letterSpacing="1px"
+      textLength="340"
       lengthAdjust="spacingAndGlyphs"
     >
       {title}

@@ -10,7 +10,7 @@ import { getPublicBooks } from '~/api';
 import AKlogo from '~/assets/AKlogo';
 import classNames from 'classnames';
 import BookCover from '~/assets/BookCover';
-import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card';
+import { Card, CardContent, CardHeader } from '~/components/ui/card';
 import {
   Pagination,
   PaginationContent,
@@ -127,35 +127,38 @@ export default function Index() {
           </p>
         ) : (
           books.map((book: Book) => (
-            <Card key={book.id} className="bg-white shadow-lg rounded-lg">
-              <CardHeader>
+            <Card
+              key={book.id}
+              className="bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 py-1 rounded-2xl overflow-hidden"
+            >
+              <CardHeader className="p-0">
                 {book.cover ? (
                   <img
                     src={book.cover}
                     alt={`${book.name} cover`}
-                    className="w-full h-64 object-cover rounded-t-lg"
+                    className="w-full h-64 object-cover"
                   />
                 ) : (
                   <BookCover
                     title={book.name}
-                    className="w-full h-64 object-cover rounded-t-lg"
+                    className="w-full h-64 object-cover"
                     width="100%"
                     height="100%"
                   />
                 )}
-                <CardTitle className="text-xl font-semibold text-gray-800 mt-4">
-                  {book.name}
-                </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">نووسەر: {book.author}</p>
-                <p className="text-sm text-gray-600">
-                  وەرگێڕ: {book.translator}
-                </p>
-                <p className="text-sm text-gray-600">
-                  بابەت: {book.category.name}
-                </p>
-                <p className="text-sm text-gray-500">نرخ: {book.price} دینار</p>
+              <CardContent className="p-5 space-y-2">
+                <h3 className="text-xl font-bold text-gray-800">{book.name}</h3>
+                <div className="flex flex-col text-sm text-gray-600">
+                  <span>✍ نووسەر: {book.author}</span>
+                  <span>🔄 وەرگێڕ: {book.translator}</span>
+                  <span>📚 بابەت: {book.category.name}</span>
+                </div>
+                <div className="mt-2 text-right">
+                  <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    نرخ: {book.price.toLocaleString('en-US')} دینار{' '}
+                  </span>
+                </div>
               </CardContent>
             </Card>
           ))
@@ -193,6 +196,24 @@ export default function Index() {
           </PaginationItem>
         </PaginationContent>
       </Pagination>
+
+      <div className="my-10">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">
+          شوێنی کتێبخانەکە
+        </h2>
+        <div className="flex justify-center">
+          <iframe
+            title="Bookstore Location"
+            width="100%"
+            height="400"
+            className="max-w-4xl rounded-lg shadow-md"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            src={`https://www.google.com/maps?q=36.25563583877866,44.8832864024485&hl=ku&z=16&output=embed`}
+          ></iframe>
+        </div>
+      </div>
     </main>
   );
 }
