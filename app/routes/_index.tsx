@@ -233,3 +233,36 @@ export default function Index() {
     </main>
   );
 }
+
+export function ErrorBoundary() {
+  return (
+    <main
+      className="p-8 bg-gray-100 min-h-screen flex items-center justify-center"
+      dir="rtl"
+    >
+      <div className="max-w-xl text-center space-y-4">
+        <h1 className="text-3xl font-bold text-gray-800">
+          سیستەمەکەمان لەسەر نوێکردنەوەیە 🔧
+        </h1>
+        <p className="text-gray-600 text-lg">
+          ئێمە لەسەر باشترکردنی سیستەمەکە کاردەکەین، کاتێکیتر دووبارە هەوڵبدەوە
+        </p>
+
+        <p className="text-gray-500 text-sm">
+          تکایە پەیوەندی بکەن لە ڕێگەی ئەم ژمارانە بۆ زانیاری زیاتر
+        </p>
+
+        <div className="text-gray-700 text-md">
+          📞 :{' '}
+          <span className="font-bold px-2" dir="ltr">
+            0770 158 0442
+          </span>{' '}
+          ||
+          <span className="font-bold px-2" dir="ltr">
+            0750 112 3555
+          </span>
+        </div>
+      </div>
+    </main>
+  );
+}
