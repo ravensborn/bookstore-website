@@ -201,7 +201,7 @@ export default function Index() {
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">
           شوێنی کتێبخانەکە
         </h2>
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-6">
           <iframe
             title="Bookstore Location"
             width="100%"
@@ -210,8 +210,24 @@ export default function Index() {
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps?q=36.25563583877866,44.8832864024485&hl=ku&z=16&output=embed`}
+            src="https://www.google.com/maps?q=36.25563583877866,44.8832864024485&hl=ku&z=16&output=embed"
           ></iframe>
+        </div>
+        <div className="text-center text-gray-700 space-y-2">
+          <p className="text-lg">
+            📞 :{' '}
+            <span className="font-bold  px-3" dir="ltr">
+              0770 158 0442
+            </span>
+            ||
+            <span className="font-bold px-3" dir="ltr">
+              0750 112 3555
+            </span>
+          </p>
+
+          <p className="text-md">
+            🚚 : گەیاندنی کتێب بۆ هەموو ناوچەکانی کوردستان.
+          </p>
         </div>
       </div>
     </main>
