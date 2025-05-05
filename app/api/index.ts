@@ -1,6 +1,6 @@
 // app/api/books.ts
 
-const BASE_URL = process.env.PUBLIC_API_BASE_URL;
+const BASE_URL = process.env.API_URL;
 
 export const getPublicBooks = async (search: string, page: number) => {
   const url = new URL('/api/books', BASE_URL);
