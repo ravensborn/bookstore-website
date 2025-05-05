@@ -80,7 +80,7 @@ export default function Index() {
       <div className="flex items-center justify-center mb-8">
         <AKlogo height={100} width={100} />
         <h1 className="text-3xl font-bold text-gray-800 mr-4">
-          کتێبخانەی ئەحمەد کۆی
+          کتێبخانەی ئەحمەد کۆیی
         </h1>
       </div>
 
