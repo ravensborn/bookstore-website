@@ -21,7 +21,7 @@ EXPOSE 3000
 
 # Set the NODE_ENV environment variable to production
 ENV NODE_ENV=production
-ENV API_URL=ENV API_URL=http://backend.ahmad-koye.com/
+ENV API_URL=ENV API_URL=https://backend.ahmad-koye.com/
 
 # Start the Remix app in production mode using remix-serve
 CMD ["npm", "start"]
