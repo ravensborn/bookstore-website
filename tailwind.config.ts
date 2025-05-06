@@ -17,6 +17,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        carlito: ['"Carlito"', 'sans-serif'],
+        arabic: ['"Noto Naskh Arabic"', 'sans-serif'],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
