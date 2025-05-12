@@ -2,15 +2,25 @@ interface Props {
   isDarkMode?: boolean;
   height?: number;
   width?: number;
+  style?: React.CSSProperties;
+  className?: string;
 }
 
-const AKlogo = ({ isDarkMode = false, height = 24, width = 24 }: Props) => {
+const AKlogo = ({
+  isDarkMode = false,
+  height = 24,
+  width = 24,
+  style,
+  className,
+}: Props) => {
   return (
     <svg
       viewBox="0 0 1300 1300"
       xmlns="http://www.w3.org/2000/svg"
       height={height}
       width={width}
+      style={style}
+      className={className}
       xmlSpace="preserve"
     >
       <path d="M440 336h86v75h-86z" fill="none" />
