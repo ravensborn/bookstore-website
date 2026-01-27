@@ -1,5 +1,6 @@
 services:
   app:
+    container_name: ${APP_INSTANCE_NAME}-${NODE_ENV}
     build:
       context: ./
       dockerfile: Dockerfile
