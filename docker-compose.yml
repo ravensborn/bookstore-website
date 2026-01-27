@@ -6,6 +6,11 @@ services:
       dockerfile: Dockerfile
     networks:
       - dokploy-network
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - APP_INSTANCE_NAME=${APP_INSTANCE_NAME}
+      - API_URL=${API_URL}
+      - PORT=3000
     labels:
       - traefik.enable=true
 
