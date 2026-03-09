@@ -1,7 +1,19 @@
 services:
   app:
+    container_name: ${APP_INSTANCE_NAME}-${NODE_ENV}
     build:
       context: ./
       dockerfile: Dockerfile
-    ports:
-      - '3002:3000'
+    networks:
+      - dokploy-network
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - APP_INSTANCE_NAME=${APP_INSTANCE_NAME}
+      - API_URL=${API_URL}
+      - PORT=3000
+    labels:
+      - traefik.enable=true
+
+networks:
+  dokploy-network:
+    external: true
