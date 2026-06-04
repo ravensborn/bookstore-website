@@ -14,7 +14,8 @@ export const meta: MetaFunction = () => {
   return [
     { title: 'Ahmad Koye Official Website' },
     {
-      description:
+      name: 'description',
+      content:
         "Welcome to Ahmad Koye's official website. Discover books, events, and more!",
     },
     { name: 'keywords', content: 'books, bookstore, events, Ahmad Koye' },
@@ -46,8 +47,8 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <head>
+    <html lang="ku" dir="rtl" suppressHydrationWarning>
+      <head suppressHydrationWarning>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />

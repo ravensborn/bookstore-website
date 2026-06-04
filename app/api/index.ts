@@ -16,6 +16,7 @@ export const getPublicBooks = async (search: string, page: number) => {
     headers: {
       Accept: 'application/json',
     },
+    signal: AbortSignal.timeout(5000),
   });
 
   if (!res.ok) {
